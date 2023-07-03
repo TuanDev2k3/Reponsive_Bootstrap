@@ -13,7 +13,7 @@
     background-size: cover;
     background-position: 80%;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     box-shadow: 0 0 5px #000;
     border: 10px solid #744322;
 }
