@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.content {
+    background-image: url(./img/background.png);
+    background-size: cover;
+    background-position: 80%;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 0 5px #000;
+    border: 10px solid #744322;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin-right: 30px;
+}
+
+#logo img {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-item .nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.nav-item .nav-link:hover {
+    background: #ab6232;
+    color: #fff;
+    border-radius: 5px;
+}
+.nav-item .nav-link:focus{
+    color: red;
+}
+.navbar{
+    position: fixed;
+    z-index: 11;
+}
+/* HOME */
+#home {
+    margin-top: 90px;
+}
+
+#home h1 {
+    color: #744322;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Permanent Marker', 'cursive';
+}
+
+#home p {
+    color: #ab6232;
+    font-weight: 600;
+}
+.btn button {
+    width: 150px;
+    height: 40px;
+    border: 3px solid #744322;
+    background: transparent;
+    font-weight: bold;
+    color: #744322;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.btn button:hover {
+    background: #744322;
+    color: #fff;
+}
+
+.changeContent::after {
+    content: ' ';
+    color: #744322;
+    font-family: 'Permanent Marker', 'cursive';
+    animation: change 10s linear infinite;
+}
+/* Dropdown */
+.dropdown-menu .dropdown-item{
+    color: #744322;
+    padding: 10px 5px;
+    transition: .3s ease;
+}
+.dropdown-menu .dropdown-item:hover{
+    background: #744322;
+    color: #fff;
+}
+@keyframes change {
+    0% {
+        content: 'Birthday Cake';
+    }
+
+    25% {
+        content: 'Chocolate Cake';
+    }
+
+    50% {
+        content: 'Party Cake';
+    }
+
+    75% {
+        content: 'Slice Cake';
+    }
+
+    100% {
+        content: 'Cup Cake';
+    }
+}
+@media screen and (max-width: 991px){
+    .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        background: #7d4e2f;
+        padding: 10px 0;
+        transition: width .4s linear;
+        z-index: 10;
+    }
+    .nav-item .nav-link{
+        padding: 10px;
+        margin: 0 10px;
+        font-size: 18px;
+    }
+    .navbar-nav.active{
+        width: 250px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #home h1 {
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    #home p {
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    .btn button {
+        border: 3px solid white;
+        color: white;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    .changeContent::after {
+        color: red;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #home h1 {
+        font-size: 50px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #logo {
+        font-size: 25px;
+    }
+
+    #logo img {
+        width: 30px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    #home h1 {
+        font-size: 45px;
+    }
+
+    #logo {
+        font-size: 20px;
+    }
+}
